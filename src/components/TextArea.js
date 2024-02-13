@@ -46,13 +46,14 @@ export default function TextArea(props) {
         <h2 className='my-2'>Enter Your Text Here</h2>
         <textarea className="form-control" onChange={handleOnchange} id="exampleFormControlTextarea1" value={text} rows="8"></textarea>
         </div>
-        <button type="button" onClick={toUppercase} className="btn btn-secondary mx-1 my-1">To UpperCase</button>
-        <button type="button" onClick={toLowercase} className="btn btn-secondary mx-1 my-1">To LowerCase</button>
-        <button type="button" onClick={removeSpace} className="btn btn-secondary mx-1 my-1">Remove Extra Space</button>
-        <button type="button" onClick={toClear} className="btn btn-secondary mx-1 my-1">Clear Text</button>
-        <button type="button" onClick={speakText} className="btn btn-secondary mx-1 my-1">Speak Text</button>
+        <button type="button" onClick={toUppercase} disabled={!text} className="btn btn-secondary mx-1 my-1">To UpperCase</button>
+        <button type="button" onClick={toLowercase} disabled={!text} className="btn btn-secondary mx-1 my-1">To LowerCase</button>
+        <button type="button" onClick={removeSpace} disabled={!text} className="btn btn-secondary mx-1 my-1">Remove Extra Space</button>
+        <button type="button" onClick={toClear} disabled={!text} className="btn btn-secondary mx-1 my-1">Clear Text</button>
+        <button type="button" onClick={toClear} disabled={!text} className="btn btn-secondary mx-1 my-1">Clear Text</button>
+        <button type="button" onClick={speakText} disabled={!text} className="btn btn-secondary mx-1 my-1">Speak Text</button>
         
-        <button type="button" onClick={stopSpeakText} className="btn btn-secondary mx-1 my-1">Stop Speak</button>
+        <button type="button" onClick={stopSpeakText} disabled={!text} className="btn btn-secondary mx-1 my-1">Stop Speak</button>
        
 
 
